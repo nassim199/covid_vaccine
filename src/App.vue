@@ -39,8 +39,11 @@
       <v-btn text>
         <router-link tag="span" to="/vaccine">operations de vaccin</router-link>
       </v-btn>
-      <v-btn text>
+      <v-btn text v-if="!authentified">
         <router-link tag="span" to="/login">Login</router-link>
+      </v-btn>
+      <v-btn text v-else>
+        <router-link tag="span" to="/account">Account</router-link>
       </v-btn>
     </v-app-bar>
 
@@ -92,5 +95,10 @@ export default {
   data: () => ({
     //
   }),
+  computed: {
+    authentified() {
+      return this.$store.getters.authentified
+    }
+  }
 };
 </script>
