@@ -2,7 +2,10 @@
   <div class="account">
     <v-container>
       <v-container>
+        <h3>
         Suivi de l'operation de vaccination
+        </h3>
+        <div class="souligner"/>
       </v-container>
     <v-stepper alt-labels>
       <v-stepper-header>
@@ -29,6 +32,31 @@
         </v-stepper-step>
       </v-stepper-header>
     </v-stepper>
+     <v-container>
+       <h3>
+        Je localise mon centre de test
+       </h3>
+       <div class="souligner"/>
+      </v-container>
+      <v-container>
+      <v-col cols="5">
+            <v-img
+              :src="require('../assets/map.png')"
+              contain
+              height="300"
+            />
+      </v-col>
+      </v-container>
+       
     </v-container>
   </div>
 </template>
+
+<style scoped>
+.souligner {
+  height: 3px;
+  width: 100px;
+  border-radius: 2px;
+  background-color: black;
+}
+</style>

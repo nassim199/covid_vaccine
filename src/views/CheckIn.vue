@@ -13,7 +13,7 @@
       label="NSS"
     ></v-text-field>
     <v-select
-    :items="['spoutnik', 'astrazeneca']"
+    :items="['spoutnik', 'astrazeneca', 'sinopharm']"
     label="Marque du vaccin"
     ></v-select>
     <v-select
