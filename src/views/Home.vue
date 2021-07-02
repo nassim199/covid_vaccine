@@ -1,15 +1,58 @@
 <template>
-  <hello-world />
+  <v-container>
+    <v-row class="text-center">
+      <v-col>
+        <v-card>
+          <div class="bloc">
+            Acceuil
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="text-center">
+      <v-col>
+        <v-card>
+          <div class="bloc">
+            foire aux questions
+          </div>
+        </v-card>
+        <v-btn @click="goToFaq">
+          voir plus
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row class="text-center">
+      <v-col>
+        <v-card>
+          <div class="bloc">
+            operations de vaccination
+          </div>
+        </v-card>
+        <v-btn @click="goToVaccine">
+          voir plus
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
 
   export default {
     name: 'Home',
-
-    components: {
-      HelloWorld,
-    },
+    methods: {
+      goToFaq() {
+        this.$router.push('/faq')
+      },
+      goToVaccine() {
+        this.$router.push('/vaccine')
+      }
+    }
   }
 </script>
+
+<style scoped>
+  .bloc {
+    height: 200px;
+  }
+</style>
