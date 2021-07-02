@@ -33,6 +33,12 @@
         </v-btn>
       </v-col>
     </v-row>
+    <v-btn
+      elevation="2"
+      fab
+      class="feedback"
+      @click="feedback"
+    > <v-icon color="teal darken-2" >mdi-email</v-icon> </v-btn>
   </v-container>
 </template>
 
@@ -46,6 +52,9 @@
       },
       goToVaccine() {
         this.$router.push('/vaccine')
+      },
+      feedback() {
+        this.$router.push('/feedback')
       }
     }
   }
@@ -54,5 +63,10 @@
 <style scoped>
   .bloc {
     height: 200px;
+  }
+  .feedback {
+    position: fixed;
+    bottom: 4vh;
+    right: 4vw;
   }
 </style>

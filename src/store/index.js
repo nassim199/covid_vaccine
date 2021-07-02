@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    authentified: false
+    authentified: 0
   },
   getters: {
     // ...
@@ -15,10 +15,13 @@ export default new Vuex.Store({
   },
   mutations: {
     login(state) {
-      state.authentified = true
+      state.authentified = 1
+    },
+    loginCentre(state) {
+      state.authentified = 2
     },
     logout(state) {
-      state.authentified = false
+      state.authentified = 0
     }
   },
   actions: {

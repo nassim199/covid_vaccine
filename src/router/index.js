@@ -39,6 +39,26 @@ const routes = [
     path: '/account',
     name: 'Account',
     component: () => import('../views/Account.vue')
+  },
+  {
+    path: '/loginCitoyen',
+    name: 'LoginCitoyen',
+    component: () => import('../views/LoginCitoyen.vue')
+  },
+  {
+    path: '/loginCentre',
+    name: 'LoginCentre',
+    component: () => import('../views/LoginCentre.vue')
+  },
+  {
+    path: '/feedback',
+    name: 'Feedback',
+    component: () => import('../views/Feedback.vue')
+  },
+  {
+    path: '/checkIn',
+    name: 'CheckIn',
+    component: () => import('../views/CheckIn.vue')
   }
   // {
   //   path: '/about',

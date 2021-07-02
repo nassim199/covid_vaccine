@@ -1,23 +1,44 @@
 <template>
   <v-container>
-    <v-row class="text-center">
-      <v-col>
-        <div>
-          This is the Login page
-        </div>
-        <v-btn @click="login">
-          Login
-        </v-btn>
+    <v-row justify="space-around">
+      <v-col cols="5">
+        <v-card>
+          <v-col class="bloc text-center">
+            <v-container>
+                <v-img
+                  :src="require('../assets/logo.svg')"
+                  class="my-3"
+                  contain
+                  height="160"
+                />
+            </v-container>
+
+            <v-btn @click="loginCitoyen">
+              Authentification pour citoyen
+            </v-btn>
+            <div>
+              Vous n'avez pas de compte? <a @click="registerCitoyen">creez-en un</a>
+            </div>
+          </v-col>
+        </v-card>
       </v-col>
-    </v-row>
-    <v-row class="text-center">
-      <v-col>
-        <div>
-          No account?
-        </div>
-        <v-btn>
-          Register
-        </v-btn>
+      <v-col cols="5">
+        <v-card>
+          <v-col class="bloc text-center">
+            <v-container>
+                <v-img
+                  :src="require('../assets/logo.svg')"
+                  class="my-3"
+                  contain
+                  height="160"
+                />
+            </v-container>
+
+            <v-btn @click="loginCentre">
+              Authentification pour centre de test
+            </v-btn>
+          </v-col>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -28,10 +49,21 @@
   export default {
     name: 'Login',
     methods: {
-      login() {
-        this.$store.commit('login')
-        this.$router.replace('/account')
+      loginCitoyen() {
+        this.$router.push('/loginCitoyen')
+      },
+      registerCitoyen() {
+        this.$router.push('/signIn')
+      },
+      loginCentre() {
+        this.$router.push('/loginCentre')
       }
     }
   }
 </script>
+
+<style>
+.bloc {
+  height: 340px;
+}
+</style>

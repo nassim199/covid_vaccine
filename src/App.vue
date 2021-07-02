@@ -39,11 +39,14 @@
       <v-btn text>
         <router-link tag="span" to="/vaccine">operations de vaccin</router-link>
       </v-btn>
-      <v-btn text v-if="!authentified">
+      <v-btn text v-if="login">
         <router-link tag="span" to="/login">Login</router-link>
       </v-btn>
-      <v-btn text v-else>
-        <router-link tag="span" to="/account">Account</router-link>
+      <v-btn text v-if="checkIn">
+        <router-link tag="span" to="/checkIN">Check In</router-link>
+      </v-btn>
+      <v-btn text v-if="account">
+        <router-link tag="span" to="/account">Mon compte</router-link>
       </v-btn>
     </v-app-bar>
 
@@ -96,8 +99,14 @@ export default {
     //
   }),
   computed: {
-    authentified() {
-      return this.$store.getters.authentified
+    account() {
+      return this.$store.getters.authentified==1
+    },
+    login() {
+      return this.$store.getters.authentified==0
+    },
+    checkIn() {
+      return this.$store.getters.authentified==2
     }
   }
 };
