@@ -3,7 +3,10 @@
     <v-row justify="center">
     <v-col cols="4">
     <v-container></v-container>
-    
+     <v-text-field
+      label="E-mail"
+    ></v-text-field>
+
     <v-text-field
       label="Objet du feedback"
     ></v-text-field>
@@ -29,7 +32,7 @@
       </template>
 
       <v-card>
-        <v-card-title class="text-h5 grey lighten-2">
+        <v-card-title class="text-h5 blue lighten-2 white--text">
           Merci pour votre feedback
         </v-card-title>
 
