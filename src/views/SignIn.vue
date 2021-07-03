@@ -67,9 +67,11 @@
               <v-col cols="5">
                 <v-select
                 label="Wilaya"
+                :items="[' Adrar', 'Chlef', 'Laghouat', 'Oum El Bouaghi', 'Batna ', 'Béjaia', 'Biskra ', 'Béchar', 'Blida ', 'Bouira', 'Tamanrasset ', 'Tebessa ', 'Tlemcen', 'Tiaret ', 'Tizi Ouzou', 'Alger', 'Djelfa ', 'Jijel ', 'Sétif ', ' Saïda', ' Skikda', 'Sidi Bel Abbès', 'Annaba', ' Guelma ', 'Constantine ', ' Médéa', 'Mostaganem ', 'MSila', 'Mascara ', 'Ouargla', 'Oran', 'El Bayadh ', 'Illizi', 'Bordj Bou Arreridj ', 'Boumerdès', 'El Taref', 'Tindouf ', 'Tissemsilt', 'El Oued ', 'Khenchela', ' Souk Ahras ', 'Tipaza', ' Mila', 'Ain Defla', 'Naama', 'Ain Témouchent', 'Ghardaia ', 'Relizane ']"
                 ></v-select>
                 <v-select
                 label="Commune"
+                :items="[' Alger-Centre ', 'Sidi MHamed', ' El Madania ', ' Belouizdad ', ' Bab El Oued ', ' Bologhine ', 'Casbah ', ' Oued Koriche ', ' Bir Mourad Raïs ', ' El Biar ', ' Bouzareah ', ' Birkhadem ', ' El Harrach', 'Baraki ', ' Oued Smar ', ' Bachdjerrah ', ' Hussein Dey ', ' Kouba ', 'Bourouba ', 'Dar El Beïda ', ' Bab Ezzouar ', ' Ben Aknoun', ' Dely Ibrahim ', ' El Hammamet ', ' Raïs Hamidou ', 'Djasr Kasentina ', ' El Mouradia', ' Hydra ', ' Mohammadia ', ' Bordj El Kiffan', ' El Magharia ', ' Beni Messous ', ' Les Eucalyptus ', ' Birtouta ', 'Tessala El Merdja ', 'Ouled Chebel  ', 'Sidi Moussa ', 'Aïn Taya ', 'Bordj El Bahri ', ' El Marsa ', ' HRaoua ', ' Rouïba ', ' Reghaïa ', ' Aïn Benian ', ' Staoueli ', ' Zeralda ', ' Mahelma ', ' Rahmania ', ' Souidania ', ' Cheraga ', ' Ouled Fayet ', ' El Achour', ' Draria ', ' Douera ', ' Baba Hassen ', 'Khraicia ', 'Saoula' ]"
                 ></v-select>
 
                 <v-textarea
