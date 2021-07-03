@@ -80,7 +80,7 @@
         class="primary lighten-2 py-4 text-center white--text"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Suivac</strong>
+      ©  {{ new Date().getFullYear() }} <strong>Tout les droits sont reservés</strong>
       </v-col>
     </v-row>
   </v-footer>
@@ -95,10 +95,9 @@ export default {
   data: () => ({
     links: [
         'Accueil',
-        'A propos',
-        'Equipe',
-        'Services',
-        'Blog',
+        'Informations',
+        'Faq',
+        'Operations de vaccination',
         'Contactez-nous',
       ],
   }),
