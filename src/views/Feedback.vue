@@ -33,7 +33,7 @@
 
       <v-card>
         <v-card-title class="text-h5 blue lighten-2 white--text">
-          Merci pour votre feedback
+          Nous vous remercions pour votre feedback.
         </v-card-title>
 
         <v-divider></v-divider>

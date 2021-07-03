@@ -8,7 +8,7 @@
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="Suivac Logo"
           class="shrink mr-2"
           contain
           :src="require('./assets/logo-8.png')"
@@ -17,7 +17,7 @@
         />
 
         <v-img
-          alt="Vuetify Name"
+          alt="Suivac Name"
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
@@ -29,7 +29,7 @@
       <v-spacer></v-spacer>
 
       <v-btn text color="#212121">
-        <router-link tag="span" to="/">Home</router-link>
+        <router-link tag="span" to="/">Accueil</router-link>
       </v-btn>
       <v-btn text color="#212121">
         <router-link tag="span" to="/info">informations</router-link>
@@ -38,10 +38,10 @@
         <router-link tag="span" to="/faq">Faq</router-link>
       </v-btn>
       <v-btn text color="#212121">
-        <router-link tag="span" to="/vaccine">operations de vaccin</router-link>
+        <router-link tag="span" to="/vaccine">Operations de vaccination</router-link>
       </v-btn>
       <v-btn text color="#212121" v-if="login">
-        <router-link tag="span" to="/login">Login</router-link>
+        <router-link tag="span" to="/login">Authentification</router-link>
       </v-btn>
       <v-btn text color="#212121" v-if="checkIn">
         <router-link tag="span" to="/checkIN">Check In</router-link>
@@ -58,7 +58,7 @@
       <router-view/>
     </v-main>
 
-    <v-footer
+     <v-footer
       dark
       padless
     >
@@ -79,17 +79,56 @@
             </v-icon>
           </v-btn>
         </v-card-text>
+        <v-container grid-list-xl>
+        <v-row>
+          <v-col>
+             <div class="d-flex align-center">
+        <v-img
+          alt="Suivac Logo"
+          class="shrink mr-2"
+          contain
+          :src="require('./assets/logo-8.png')"
+          transition="scale-transition"
+          width="40"
+        />
 
+        <v-img
+          alt="Suivac Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          :src="require('./assets/txt-8.png')"
+          width="100"
+        />
+      </div>
+            </v-col>
+             <v-spacer></v-spacer> 
+          <v-col>
         <v-card-text class="white--text pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada.
-        </v-card-text>
-
+         Informations sur le vaccin
+         </v-card-text>
+         </v-col>
+          <v-spacer></v-spacer> 
+         <v-col>
+<v-card-text class="white--text pt-0">
+         Foire aux question 
+         </v-card-text>
+         </v-col>
+          <v-spacer></v-spacer> 
+         <v-col>
+         <v-card-text class="white--text pt-0">
+          Opérations de vaccination
+         </v-card-text>
+         </v-col>
+          <v-spacer></v-spacer> 
+         </v-row>
+         </v-container>
         <v-divider></v-divider>
 
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          © {{ new Date().getFullYear() }} Tous les droits sont réservés.
         </v-card-text>
-      </v-card>
+     </v-card> 
     </v-footer>
   </v-app>
 </template>

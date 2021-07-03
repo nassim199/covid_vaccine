@@ -35,7 +35,7 @@
         
         <v-stepper-step step="5">
           <v-btn disabled>
-            imprimer badge de vaccination
+            Imprimer badge de vaccination
           </v-btn>
         </v-stepper-step>
 

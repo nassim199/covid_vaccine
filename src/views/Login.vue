@@ -17,7 +17,7 @@
               Authentification pour citoyen
             </v-btn>
             <div>
-              Vous n'avez pas de compte? <a @click="registerCitoyen">creez-en un</a>
+              Vous n'avez pas de compte? <a @click="registerCitoyen">Creez-en un</a>
             </div>
           </v-col>
         </v-card>
