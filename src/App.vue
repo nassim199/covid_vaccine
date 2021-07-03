@@ -58,78 +58,32 @@
       <router-view/>
     </v-main>
 
-     <v-footer
-      dark
-      padless
+       <v-footer
+    color="primary lighten-2"
+    padless
+  >
+    <v-row
+      justify="center"
+      no-gutters
     >
-      <v-card
-        flat
-        tile
-        class="blue lighten-2 white--text text-center"
+      <v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+        class="my-2"
       >
-        <v-card-text>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-4 white--text"
-            icon
-          >
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
-        </v-card-text>
-        <v-container grid-list-xl>
-        <v-row>
-          <v-col>
-             <div class="d-flex align-center">
-        <v-img
-          alt="Suivac Logo"
-          class="shrink mr-2"
-          contain
-          :src="require('./assets/logo-8.png')"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Suivac Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          :src="require('./assets/txt-8.png')"
-          width="100"
-        />
-      </div>
-            </v-col>
-             <v-spacer></v-spacer> 
-          <v-col>
-        <v-card-text class="white--text pt-0">
-         Informations sur le vaccin
-         </v-card-text>
-         </v-col>
-          <v-spacer></v-spacer> 
-         <v-col>
-<v-card-text class="white--text pt-0">
-         Foire aux question 
-         </v-card-text>
-         </v-col>
-          <v-spacer></v-spacer> 
-         <v-col>
-         <v-card-text class="white--text pt-0">
-          Opérations de vaccination
-         </v-card-text>
-         </v-col>
-          <v-spacer></v-spacer> 
-         </v-row>
-         </v-container>
-        <v-divider></v-divider>
-
-        <v-card-text class="white--text">
-          © {{ new Date().getFullYear() }} Tous les droits sont réservés.
-        </v-card-text>
-     </v-card> 
-    </v-footer>
+        {{ link }}
+      </v-btn>
+      <v-col
+        class="primary lighten-2 py-4 text-center white--text"
+        cols="12"
+      >
+        {{ new Date().getFullYear() }} — <strong>Suivac</strong>
+      </v-col>
+    </v-row>
+  </v-footer>
   </v-app>
 </template>
 
@@ -139,7 +93,14 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    links: [
+        'Accueil',
+        'A propos',
+        'Equipe',
+        'Services',
+        'Blog',
+        'Contactez-nous',
+      ],
   }),
   computed: {
     account() {
