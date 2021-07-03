@@ -134,12 +134,12 @@
                 v-bind="attrs"
                 v-on="on"
               >
-                Validate
+                S'inscrire
               </v-btn>
             </template>
 
             <v-card>
-              <v-card-title class="text-h5 grey lighten-2">
+              <v-card-title class="text-h5 blue lighten-2 white--text">
                 Privacy Policy
               </v-card-title>
 
@@ -166,7 +166,7 @@
             class="mr-4"
             @click="reset"
           >
-            Reset Form
+            Reset
           </v-btn>
         </v-container>
       </v-form>

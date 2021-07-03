@@ -36,14 +36,14 @@
       class="mr-4"
       @click="validate"
     >
-      Validate
+      S'authentifier
     </v-btn>
 
     <v-btn
       class="mr-4"
       @click="reset"
     >
-      Reset Form
+      Reset 
     </v-btn>
   </v-form>
   </v-container>

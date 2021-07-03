@@ -1,17 +1,49 @@
 <template>
+<div>
+  <v-img
+      :src="require('../assets/faq sans vide-8.png')"
+      class="my-3"
+      contain
+    /> 
  <v-container>
-  <v-expansion-panels>
-    <v-expansion-panel
-      v-for="(item,i) in 5"
-      :key="i"
-    >
-      <v-expansion-panel-header>
-        Item
-      </v-expansion-panel-header>
-      <v-expansion-panel-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-  </v-expansion-panels>
+       <v-expansion-panels>
+          <v-expansion-panel
+            v-for="(q,i) in questions"
+            :key="i"
+          >
+            <v-expansion-panel-header>
+              {{ q.question }}
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+              {{ q.reponse }}
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
  </v-container>
+</div>
 </template>
+
+<script>
+
+  export default {
+    name: 'Faq',
+    data() {
+      return {
+        questions: [
+          {
+            question: "question 1",
+            reponse: "reponse 1"
+          },
+          {
+            question: "question 2",
+            reponse: "reponse 2"
+          },
+          {
+            question: "question 3",
+            reponse: "reponse 3"
+          },
+        ]
+      }
+    }
+  }
+</script>

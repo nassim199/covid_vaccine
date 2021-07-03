@@ -30,6 +30,15 @@
         <v-stepper-step step="4">
           Prise de dose 2
         </v-stepper-step>
+        
+        <v-divider></v-divider>
+        
+        <v-stepper-step step="5">
+          <v-btn disabled>
+            imprimer badge de vaccination
+          </v-btn>
+        </v-stepper-step>
+
       </v-stepper-header>
     </v-stepper>
      <v-container>
@@ -57,6 +66,6 @@
   height: 3px;
   width: 100px;
   border-radius: 2px;
-  background-color: black;
+  background-color: #2196F3;
 }
 </style>

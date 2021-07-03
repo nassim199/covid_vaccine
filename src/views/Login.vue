@@ -6,7 +6,7 @@
           <v-col class="bloc text-center">
             <v-container>
                 <v-img
-                  :src="require('../assets/logo.svg')"
+                  :src="require('../assets/citoyen-8.png')"
                   class="my-3"
                   contain
                   height="160"
@@ -27,7 +27,7 @@
           <v-col class="bloc text-center">
             <v-container>
                 <v-img
-                  :src="require('../assets/logo.svg')"
+                  :src="require('../assets/centre de test-8.png')"
                   class="my-3"
                   contain
                   height="160"

@@ -2,15 +2,16 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="white"
       dark
+      
     >
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          :src="require('./assets/logo-8.png')"
           transition="scale-transition"
           width="40"
         />
@@ -20,33 +21,36 @@
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          :src="require('./assets/txt-8.png')"
           width="100"
         />
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn text>
+      <v-btn text color="#212121">
         <router-link tag="span" to="/">Home</router-link>
       </v-btn>
-      <v-btn text>
+      <v-btn text color="#212121">
         <router-link tag="span" to="/info">informations</router-link>
       </v-btn>
-      <v-btn text>
+      <v-btn text color="#212121">
         <router-link tag="span" to="/faq">Faq</router-link>
       </v-btn>
-      <v-btn text>
+      <v-btn text color="#212121">
         <router-link tag="span" to="/vaccine">operations de vaccin</router-link>
       </v-btn>
-      <v-btn text v-if="login">
+      <v-btn text color="#212121" v-if="login">
         <router-link tag="span" to="/login">Login</router-link>
       </v-btn>
-      <v-btn text v-if="checkIn">
+      <v-btn text color="#212121" v-if="checkIn">
         <router-link tag="span" to="/checkIN">Check In</router-link>
       </v-btn>
-      <v-btn text v-if="account">
+      <v-btn text color="#212121" v-if="account">
         <router-link tag="span" to="/account">Mon compte</router-link>
+      </v-btn>
+      <v-btn icon color="#212121" v-if="!login" @click="logout">
+        <v-icon> mdi-logout </v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -61,7 +65,7 @@
       <v-card
         flat
         tile
-        class="indigo lighten-1 white--text text-center"
+        class="blue lighten-2 white--text text-center"
       >
         <v-card-text>
           <v-btn
@@ -107,6 +111,12 @@ export default {
     },
     checkIn() {
       return this.$store.getters.authentified==2
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.commit('logout')
+      this.$router.replace('/login')
     }
   }
 };

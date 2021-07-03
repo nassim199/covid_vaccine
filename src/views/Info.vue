@@ -1,7 +1,13 @@
 <template>
+<div>
+    <v-img
+      :src="require('../assets/info sans vide-8.png')"
+      class="my-3"
+      contain
+    />
   <v-container>
     <v-card id="1">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -11,7 +17,7 @@
     </v-card>
     <v-container></v-container>
      <v-card id="2">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -21,7 +27,7 @@
     </v-card>
     <v-container></v-container>
      <v-card id="3">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -31,7 +37,7 @@
     </v-card>
     <v-container></v-container>
      <v-card id="4">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -41,7 +47,7 @@
     </v-card>
     <v-container></v-container>
      <v-card id="5">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -51,7 +57,7 @@
     </v-card>
     <v-container></v-container>
      <v-card id="6">
-      <v-card-title class="text-h5 grey lighten-2">
+      <v-card-title class="text-h5 blue lighten-2 white--text">
       Privacy Policy
     </v-card-title>
 
@@ -60,6 +66,7 @@
     </v-card-text>
     </v-card>
   </v-container>
+</div>
 </template>
 
 <script>
